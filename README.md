@@ -1,14 +1,6 @@
 # kata-bootstraps
 
 [![java-ci-badge]][ci-actions]
-[![php-ci-badge]][ci-actions]
-[![rust-ci-badge]][ci-actions]
-[![python-ci-badge]][ci-actions]
-[![scala-ci-badge]][ci-actions]
-[![js-ci-badge]][ci-actions]
-[![ts-ci-badge]][ci-actions]
-[![go-ci-badge]][ci-actions]
-
 
 
 Empty projects for e.g. Katas with testing support in different languages
@@ -29,11 +21,4 @@ You are welcome to contribute by submitting likewise a min setup for your langua
 [Cookiecutter](https://github.com/audreyr/cookiecutter) has a similar goal and also supports multiple languages for setting up a bare project.
 
 [java-ci-badge]:../../../kata-bootstraps/workflows/Java%20CI/badge.svg "CI build status"
-[php-ci-badge]:../../../kata-bootstraps/workflows/PHP%20CI/badge.svg "CI build status"
-[rust-ci-badge]:../../../kata-bootstraps/workflows/Rust%20CI/badge.svg "CI build status"
-[python-ci-badge]:../../../kata-bootstraps/workflows/Python%20CI/badge.svg "CI build status"
-[scala-ci-badge]:../../../kata-bootstraps/workflows/Scala%20CI/badge.svg "CI build status"
-[js-ci-badge]:../../../kata-bootstraps/workflows/js%20CI/badge.svg "CI build status"
-[ts-ci-badge]:../../../kata-bootstraps/workflows/ts%20CI/badge.svg "CI build status"
-[go-ci-badge]:../../../kata-bootstraps/workflows/GO%20CI/badge.svg "CI build status"
 [ci-actions]:../../../kata-bootstraps/actions
