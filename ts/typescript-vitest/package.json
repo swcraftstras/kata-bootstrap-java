@@ -1,0 +1,14 @@
+{
+  "name": "typescript-vitest",
+  "version": "1.0.0",
+  "description": "TDD Starter with Typescript and vitest",
+  "scripts": {
+    "test": "vitest watch",
+    "test:once": "vitest run"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.3",
+    "vitest": "^0.25.2"
+  }
+}

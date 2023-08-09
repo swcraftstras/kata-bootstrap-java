@@ -1,0 +1,5 @@
+# helloworld
+
+```shell
+stack test
+```
