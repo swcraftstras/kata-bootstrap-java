@@ -57,14 +57,6 @@ jobs:
         run: mvn -B clean package --file pom.xml
       #### END cucumber
 
-      #### BEGIN fitnesse
-      - uses: eskatos/gradle-command-action@v2.1.3
-        with:
-          build-root-directory: java/fitnesse
-          gradle-version: current
-          arguments: test --warning-mode all
-      #### END fitnesse
-
       #### BEGIN hamcrest
       - name: build hamcrest with maven
         working-directory: java/hamcrest
@@ -87,27 +79,6 @@ jobs:
         run: "sh ../../.scripts/assure_failing_test.sh './gradlew test' 'ThingTest > it_should_call_for_action() FAILED'"
       #### END hamcrest
 
-      #### BEGIN hue4j5
-      - name: build hue4j5 with maven
-        working-directory: java/hue4j5
-        run: mvn -B clean package --file pom.xml -Dtest="ThingTest#it_should_not_fail"
-      # gradlew:
-      - name: build with gradlew
-        working-directory: java/hue4j5
-        run: ./gradlew test --warning-mode all --tests ThingTest.it_should_not_fail
-
-      # gradle:
-      - uses: eskatos/gradle-command-action@v2.1.3
-        with:
-          build-root-directory: java/hue4j5
-          gradle-version: current
-          arguments: test --warning-mode all --tests ThingTest.it_should_not_fail
-
-      - name: assure one failing test
-        working-directory: java/hue4j5
-        run: "sh ../../.scripts/assure_failing_test.sh './gradlew test' 'ThingTest > it_should_call_for_action() FAILED'"
-      #### END hue4j5
-
       #### BEGIN jqwik
       - name: build jqwik with maven
         working-directory: java/jqwik
@@ -125,27 +96,6 @@ jobs:
           gradle-version: current
           arguments: test --warning-mode all
       #### END jqwik
-
-      #### BEGIN junit4
-      - name: build junit4 with maven
-        working-directory: java/junit4
-        run: mvn -B clean package --file pom.xml -Dtest="ThingTest#it_should_not_fail"
-      # gradlew:
-      - name: build with gradlew
-        working-directory: java/junit4
-        run: ./gradlew test --warning-mode all --tests ThingTest.it_should_not_fail
-
-      # gradle:
-      - uses: eskatos/gradle-command-action@v2.1.3
-        with:
-          build-root-directory: java/junit4
-          gradle-version: current
-          arguments: test --warning-mode all --tests ThingTest.it_should_not_fail
-
-      - name: assure one failing test
-        working-directory: java/junit4
-        run: "sh ../../.scripts/assure_failing_test.sh './gradlew test' 'ThingTest > it_should_call_for_action FAILED'"
-      #### END junit4
 
       #### BEGIN junit5
       - name: build junit5 with maven
