@@ -1,5 +1,0 @@
-# helloworld
-
-```shell
-stack test
-```
